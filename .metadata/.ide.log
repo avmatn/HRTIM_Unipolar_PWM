@@ -681,3 +681,349 @@
 2026-05-05 13:22:49,244 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.
 2026-05-05 13:30:42,642 [INFO] WebApp:194 - Connection lost
 2026-05-05 13:30:43,468 [INFO] WebApp:191 - Connection restablished
+2026-05-05 13:49:46,940 [INFO] WebApp:194 - Connection lost
+2026-05-05 13:49:54,169 [INFO] WebApp:191 - Connection restablished
+2026-05-05 13:57:17,580 [INFO] WebApp:194 - Connection lost
+2026-05-05 13:57:19,223 [INFO] WebApp:191 - Connection restablished
+2026-05-05 13:57:24,100 [INFO] WebApp:194 - Connection lost
+2026-05-05 13:57:25,707 [INFO] WebApp:191 - Connection restablished
+2026-05-05 13:57:32,082 [INFO] WebApp:194 - Connection lost
+2026-05-05 13:57:33,140 [INFO] WebApp:191 - Connection restablished
+2026-05-05 13:57:40,606 [INFO] WebApp:194 - Connection lost
+2026-05-05 13:57:41,109 [INFO] WebApp:191 - Connection restablished
+2026-05-05 13:57:51,083 [INFO] WebApp:194 - Connection lost
+2026-05-05 13:57:51,620 [INFO] WebApp:191 - Connection restablished
+2026-05-05 14:08:29,088 [INFO] WebApp:194 - Connection lost
+2026-05-05 14:08:39,946 [INFO] WebApp:191 - Connection restablished
+2026-05-05 14:11:46,538 [INFO] WebApp:194 - Connection lost
+2026-05-05 14:35:40,462 [INFO] WebApp:191 - Connection restablished
+2026-05-05 14:35:55,198 [INFO] WebApp:194 - Connection lost
+2026-05-05 14:35:55,509 [INFO] WebApp:191 - Connection restablished
+2026-05-05 14:35:58,263 [INFO] WebApp:194 - Connection lost
+2026-05-05 14:35:58,566 [INFO] WebApp:191 - Connection restablished
+2026-05-05 14:36:00,563 [INFO] WebApp:194 - Connection lost
+2026-05-05 14:36:00,767 [INFO] WebApp:191 - Connection restablished
+2026-05-05 14:36:03,450 [INFO] WebApp:194 - Connection lost
+2026-05-05 14:36:03,710 [INFO] WebApp:191 - Connection restablished
+2026-05-05 14:36:06,552 [INFO] WebApp:194 - Connection lost
+2026-05-05 14:36:07,198 [INFO] WebApp:191 - Connection restablished
+2026-05-05 14:36:09,664 [INFO] WebApp:194 - Connection lost
+2026-05-05 14:36:10,154 [INFO] WebApp:191 - Connection restablished
+2026-05-05 14:39:10,228 [INFO] WebApp:194 - Connection lost
+2026-05-05 14:39:10,768 [INFO] WebApp:191 - Connection restablished
+2026-05-05 15:24:52,922 [INFO] WebApp:194 - Connection lost
+2026-05-05 15:25:21,218 [INFO] WebApp:191 - Connection restablished
+2026-05-05 15:26:32,775 [INFO] WebApp:194 - Connection lost
+2026-05-05 15:26:34,201 [INFO] WebApp:191 - Connection restablished
+2026-05-05 15:35:25,876 [INFO] WebApp:194 - Connection lost
+2026-05-05 15:37:13,358 [INFO] WebApp:191 - Connection restablished
+2026-05-05 15:37:30,348 [INFO] WebApp:194 - Connection lost
+2026-05-05 15:37:37,483 [INFO] WebApp:191 - Connection restablished
+2026-05-05 15:41:55,622 [INFO] WebApp:194 - Connection lost
+2026-05-05 15:43:26,808 [INFO] WebApp:191 - Connection restablished
+2026-05-05 15:47:13,557 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-05-05 15:47:20,641 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-05-05 15:47:34,524 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-05-05 15:47:38,691 [WARN] Mcu:7025 - HRTIM1 Clean up: some unused parameters were removed
+2026-05-05 15:47:38,698 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 975109336 Bytes (1073741824)
+2026-05-05 15:47:41,587 [WARN] Mcu:7025 - HRTIM1 Clean up: some unused parameters were removed
+2026-05-05 15:47:41,596 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 1001401264 Bytes (1073741824)
+2026-05-05 15:47:47,120 [WARN] Mcu:7025 - HRTIM1 Clean up: some unused parameters were removed
+2026-05-05 15:47:47,126 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 991310968 Bytes (1073741824)
+2026-05-05 15:47:47,980 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2026-05-05 15:47:47,980 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2026-05-05 15:47:47,980 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: HRTIM
+2026-05-05 15:47:47,980 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2026-05-05 15:47:47,980 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2026-05-05 15:47:47,985 [INFO] CodeGenerator:892 - code generatio: config db path: C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\
+2026-05-05 15:47:48,355 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\license.tmp_save
+2026-05-05 15:47:48,990 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\license.tmp
+2026-05-05 15:47:49,131 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\gpio.tmp_save
+2026-05-05 15:47:49,450 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\gpio.tmp
+2026-05-05 15:47:50,591 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\stm32g4xx_it.c_save
+2026-05-05 15:47:51,225 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\stm32g4xx_it.c
+2026-05-05 15:47:51,237 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\stm32g4xx_it.h_save
+2026-05-05 15:47:51,353 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\stm32g4xx_it.h
+2026-05-05 15:47:51,430 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\stm32g4xx_hal_msp.c_save
+2026-05-05 15:47:51,741 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\stm32g4xx_hal_msp.c
+2026-05-05 15:47:51,764 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\system.tmp_save
+2026-05-05 15:47:51,896 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\system.tmp
+2026-05-05 15:47:51,930 [INFO] CodeEngine:321 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\stm32g4xx_hal_conf.h_save
+2026-05-05 15:47:52,107 [INFO] CodeEngine:345 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\stm32g4xx_hal_conf.h
+2026-05-05 15:47:52,147 [WARN] IPConfigManager:3238 - Warning: the RefConfig RCC_CommonPeriphClockConfig is not available in your config.xml file
+2026-05-05 15:47:52,176 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\main.h_save
+2026-05-05 15:47:52,390 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2026-05-05 15:47:52,409 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\main.h
+2026-05-05 15:47:52,424 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\main.c_save
+2026-05-05 15:47:52,743 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\main.c
+2026-05-05 15:47:53,970 [INFO] ProjectBuilder:3606 - Time for Copy HAL[1] : 490mS.
+2026-05-05 15:47:53,977 [INFO] ProjectBuilder:5216 - Project Generator version: 4.7.0-B52
+2026-05-05 15:47:54,146 [INFO] ConfigFileManager:1595 - The Die is : DIE469
+2026-05-05 15:47:56,853 [INFO] ProjectBuilder:5496 - Time for Generating toolchain IDE Files: 2875mS.
+2026-05-05 15:47:56,856 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 1mS.
+2026-05-05 15:47:56,861 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.
+2026-05-05 15:53:47,132 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-05-05 15:53:54,840 [WARN] Mcu:7025 - HRTIM1 Clean up: some unused parameters were removed
+2026-05-05 15:53:54,845 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 891090752 Bytes (1073741824)
+2026-05-05 15:53:59,747 [WARN] Mcu:7025 - HRTIM1 Clean up: some unused parameters were removed
+2026-05-05 15:53:59,750 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 900390776 Bytes (1073741824)
+2026-05-05 15:54:03,522 [WARN] Mcu:7025 - HRTIM1 Clean up: some unused parameters were removed
+2026-05-05 15:54:03,527 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 902594816 Bytes (1073741824)
+2026-05-05 15:54:04,322 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2026-05-05 15:54:04,322 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2026-05-05 15:54:04,322 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: HRTIM
+2026-05-05 15:54:04,323 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2026-05-05 15:54:04,323 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2026-05-05 15:54:04,325 [INFO] CodeGenerator:892 - code generatio: config db path: C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\
+2026-05-05 15:54:04,603 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\license.tmp_save
+2026-05-05 15:54:05,381 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\license.tmp
+2026-05-05 15:54:05,459 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\gpio.tmp_save
+2026-05-05 15:54:05,745 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\gpio.tmp
+2026-05-05 15:54:06,822 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\stm32g4xx_it.c_save
+2026-05-05 15:54:07,297 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\stm32g4xx_it.c
+2026-05-05 15:54:07,308 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\stm32g4xx_it.h_save
+2026-05-05 15:54:07,443 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\stm32g4xx_it.h
+2026-05-05 15:54:07,467 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\stm32g4xx_hal_msp.c_save
+2026-05-05 15:54:07,680 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\stm32g4xx_hal_msp.c
+2026-05-05 15:54:07,690 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\system.tmp_save
+2026-05-05 15:54:07,792 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\system.tmp
+2026-05-05 15:54:07,813 [INFO] CodeEngine:321 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\stm32g4xx_hal_conf.h_save
+2026-05-05 15:54:07,911 [INFO] CodeEngine:345 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\stm32g4xx_hal_conf.h
+2026-05-05 15:54:07,938 [WARN] IPConfigManager:3238 - Warning: the RefConfig RCC_CommonPeriphClockConfig is not available in your config.xml file
+2026-05-05 15:54:07,957 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\main.h_save
+2026-05-05 15:54:08,092 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\main.h
+2026-05-05 15:54:08,118 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\main.c_save
+2026-05-05 15:54:08,397 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\main.c
+2026-05-05 15:54:09,227 [INFO] ProjectBuilder:3606 - Time for Copy HAL[1] : 404mS.
+2026-05-05 15:54:09,233 [INFO] ProjectBuilder:5216 - Project Generator version: 4.7.0-B52
+2026-05-05 15:54:09,543 [INFO] ConfigFileManager:1595 - The Die is : DIE469
+2026-05-05 15:54:11,534 [INFO] ProjectBuilder:5496 - Time for Generating toolchain IDE Files: 2300mS.
+2026-05-05 15:54:11,535 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 1mS.
+2026-05-05 15:54:11,539 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.
+2026-05-05 16:00:13,657 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-05-05 16:00:17,890 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-05-05 16:00:21,054 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-05-05 16:08:49,704 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-05-05 16:08:54,822 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-05-05 16:08:58,805 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-05-05 16:09:01,205 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-05-05 16:09:15,141 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-05-05 16:09:32,146 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-05-05 16:14:13,005 [INFO] WebApp:194 - Connection lost
+2026-05-05 16:14:13,447 [INFO] WebApp:191 - Connection restablished
+2026-05-05 16:36:41,524 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-05-05 16:36:56,710 [WARN] Mcu:7025 - HRTIM1 Clean up: some unused parameters were removed
+2026-05-05 16:36:56,724 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 1005050360 Bytes (1073741824)
+2026-05-05 16:37:01,384 [WARN] Mcu:7025 - HRTIM1 Clean up: some unused parameters were removed
+2026-05-05 16:37:01,390 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 888324672 Bytes (1073741824)
+2026-05-05 16:37:05,496 [WARN] Mcu:7025 - HRTIM1 Clean up: some unused parameters were removed
+2026-05-05 16:37:05,505 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 900364720 Bytes (1073741824)
+2026-05-05 16:37:06,474 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2026-05-05 16:37:06,475 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2026-05-05 16:37:06,475 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: HRTIM
+2026-05-05 16:37:06,475 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2026-05-05 16:37:06,476 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2026-05-05 16:37:06,496 [INFO] CodeGenerator:892 - code generatio: config db path: C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\
+2026-05-05 16:37:06,906 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\license.tmp_save
+2026-05-05 16:37:07,792 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\license.tmp
+2026-05-05 16:37:07,890 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\gpio.tmp_save
+2026-05-05 16:37:08,169 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\gpio.tmp
+2026-05-05 16:37:09,608 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\stm32g4xx_it.c_save
+2026-05-05 16:37:10,315 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\stm32g4xx_it.c
+2026-05-05 16:37:10,328 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\stm32g4xx_it.h_save
+2026-05-05 16:37:10,478 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\stm32g4xx_it.h
+2026-05-05 16:37:10,514 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\stm32g4xx_hal_msp.c_save
+2026-05-05 16:37:10,769 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\stm32g4xx_hal_msp.c
+2026-05-05 16:37:10,781 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\system.tmp_save
+2026-05-05 16:37:10,906 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\system.tmp
+2026-05-05 16:37:10,940 [INFO] CodeEngine:321 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\stm32g4xx_hal_conf.h_save
+2026-05-05 16:37:11,127 [INFO] CodeEngine:345 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\stm32g4xx_hal_conf.h
+2026-05-05 16:37:11,185 [WARN] IPConfigManager:3238 - Warning: the RefConfig RCC_CommonPeriphClockConfig is not available in your config.xml file
+2026-05-05 16:37:11,238 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\main.h_save
+2026-05-05 16:37:11,428 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\main.h
+2026-05-05 16:37:11,441 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\main.c_save
+2026-05-05 16:37:11,797 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\main.c
+2026-05-05 16:37:12,874 [INFO] ProjectBuilder:3606 - Time for Copy HAL[1] : 536mS.
+2026-05-05 16:37:12,882 [INFO] ProjectBuilder:5216 - Project Generator version: 4.7.0-B52
+2026-05-05 16:37:13,219 [INFO] ConfigFileManager:1595 - The Die is : DIE469
+2026-05-05 16:37:16,421 [INFO] ProjectBuilder:5496 - Time for Generating toolchain IDE Files: 3539mS.
+2026-05-05 16:37:16,449 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 1mS.
+2026-05-05 16:37:16,455 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.
+2026-05-05 16:41:11,687 [INFO] WebApp:194 - Connection lost
+2026-05-05 16:41:12,802 [INFO] WebApp:191 - Connection restablished
+2026-05-05 16:41:51,397 [ERROR] ConfigurationRetriever:142 - IOException on connection: Connect timed out
+2026-05-05 16:41:53,402 [ERROR] ConfigurationRetriever:142 - IOException on connection: Connect timed out
+2026-05-05 16:45:33,193 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-05-05 16:45:42,283 [WARN] Mcu:7025 - HRTIM1 Clean up: some unused parameters were removed
+2026-05-05 16:45:42,288 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 960362832 Bytes (1073741824)
+2026-05-05 16:45:46,840 [WARN] Mcu:7025 - HRTIM1 Clean up: some unused parameters were removed
+2026-05-05 16:45:46,844 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 941704496 Bytes (1073741824)
+2026-05-05 16:45:51,511 [WARN] Mcu:7025 - HRTIM1 Clean up: some unused parameters were removed
+2026-05-05 16:45:51,519 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 954914128 Bytes (1073741824)
+2026-05-05 16:45:52,579 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2026-05-05 16:45:52,579 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2026-05-05 16:45:52,579 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: HRTIM
+2026-05-05 16:45:52,579 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2026-05-05 16:45:52,580 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2026-05-05 16:45:52,582 [INFO] CodeGenerator:892 - code generatio: config db path: C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\
+2026-05-05 16:45:53,042 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\license.tmp_save
+2026-05-05 16:45:53,930 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\license.tmp
+2026-05-05 16:45:54,040 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\gpio.tmp_save
+2026-05-05 16:45:54,451 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\gpio.tmp
+2026-05-05 16:45:55,894 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\stm32g4xx_it.c_save
+2026-05-05 16:45:56,547 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\stm32g4xx_it.c
+2026-05-05 16:45:56,559 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\stm32g4xx_it.h_save
+2026-05-05 16:45:56,746 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\stm32g4xx_it.h
+2026-05-05 16:45:56,784 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\stm32g4xx_hal_msp.c_save
+2026-05-05 16:45:57,145 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\stm32g4xx_hal_msp.c
+2026-05-05 16:45:57,159 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\system.tmp_save
+2026-05-05 16:45:57,345 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\system.tmp
+2026-05-05 16:45:57,375 [INFO] CodeEngine:321 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\stm32g4xx_hal_conf.h_save
+2026-05-05 16:45:57,594 [INFO] CodeEngine:345 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\stm32g4xx_hal_conf.h
+2026-05-05 16:45:57,648 [WARN] IPConfigManager:3238 - Warning: the RefConfig RCC_CommonPeriphClockConfig is not available in your config.xml file
+2026-05-05 16:45:57,677 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\main.h_save
+2026-05-05 16:45:57,932 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\main.h
+2026-05-05 16:45:57,948 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\main.c_save
+2026-05-05 16:45:58,277 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\main.c
+2026-05-05 16:45:59,214 [INFO] ProjectBuilder:3606 - Time for Copy HAL[1] : 437mS.
+2026-05-05 16:45:59,224 [INFO] ProjectBuilder:5216 - Project Generator version: 4.7.0-B52
+2026-05-05 16:45:59,503 [INFO] ConfigFileManager:1595 - The Die is : DIE469
+2026-05-05 16:46:02,494 [INFO] ProjectBuilder:5496 - Time for Generating toolchain IDE Files: 3270mS.
+2026-05-05 16:46:02,496 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 1mS.
+2026-05-05 16:46:02,504 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.
+2026-05-05 16:56:14,334 [INFO] WebApp:194 - Connection lost
+2026-05-05 16:56:15,602 [INFO] WebApp:191 - Connection restablished
+2026-05-05 17:13:57,234 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-05-05 17:14:10,502 [WARN] Mcu:7025 - HRTIM1 Clean up: some unused parameters were removed
+2026-05-05 17:14:10,513 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 918017704 Bytes (1073741824)
+2026-05-05 17:14:19,104 [WARN] Mcu:7025 - HRTIM1 Clean up: some unused parameters were removed
+2026-05-05 17:14:19,111 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 928317624 Bytes (1073741824)
+2026-05-05 17:14:20,012 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2026-05-05 17:14:20,013 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2026-05-05 17:14:20,013 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: HRTIM
+2026-05-05 17:14:20,014 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2026-05-05 17:14:20,015 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2026-05-05 17:14:20,020 [INFO] CodeGenerator:892 - code generatio: config db path: C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\
+2026-05-05 17:14:20,527 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\license.tmp_save
+2026-05-05 17:14:21,258 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\license.tmp
+2026-05-05 17:14:21,376 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\gpio.tmp_save
+2026-05-05 17:14:21,670 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\gpio.tmp
+2026-05-05 17:14:23,321 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\stm32g4xx_it.c_save
+2026-05-05 17:14:24,046 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\stm32g4xx_it.c
+2026-05-05 17:14:24,061 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\stm32g4xx_it.h_save
+2026-05-05 17:14:24,229 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\stm32g4xx_it.h
+2026-05-05 17:14:24,290 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\stm32g4xx_hal_msp.c_save
+2026-05-05 17:14:24,697 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\stm32g4xx_hal_msp.c
+2026-05-05 17:14:24,720 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\system.tmp_save
+2026-05-05 17:14:24,934 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\system.tmp
+2026-05-05 17:14:25,082 [INFO] CodeEngine:321 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\stm32g4xx_hal_conf.h_save
+2026-05-05 17:14:25,325 [INFO] CodeEngine:345 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\stm32g4xx_hal_conf.h
+2026-05-05 17:14:25,379 [WARN] IPConfigManager:3238 - Warning: the RefConfig RCC_CommonPeriphClockConfig is not available in your config.xml file
+2026-05-05 17:14:25,486 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\main.h_save
+2026-05-05 17:14:25,825 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\main.h
+2026-05-05 17:14:25,859 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\main.c_save
+2026-05-05 17:14:26,388 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\main.c
+2026-05-05 17:14:27,497 [INFO] ProjectBuilder:3606 - Time for Copy HAL[1] : 564mS.
+2026-05-05 17:14:27,505 [INFO] ProjectBuilder:5216 - Project Generator version: 4.7.0-B52
+2026-05-05 17:14:27,746 [INFO] ConfigFileManager:1595 - The Die is : DIE469
+2026-05-05 17:14:30,951 [INFO] ProjectBuilder:5496 - Time for Generating toolchain IDE Files: 3446mS.
+2026-05-05 17:14:30,953 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 1mS.
+2026-05-05 17:14:30,960 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.
+2026-05-05 17:17:01,725 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-05-05 17:18:56,989 [WARN] Mcu:7025 - HRTIM1 Clean up: some unused parameters were removed
+2026-05-05 17:18:57,024 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 1009567400 Bytes (1073741824)
+2026-05-05 17:19:03,414 [WARN] Mcu:7025 - HRTIM1 Clean up: some unused parameters were removed
+2026-05-05 17:19:03,421 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 1014173640 Bytes (1073741824)
+2026-05-05 17:19:04,088 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2026-05-05 17:19:04,089 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2026-05-05 17:19:04,089 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: HRTIM
+2026-05-05 17:19:04,089 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2026-05-05 17:19:04,095 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2026-05-05 17:19:04,106 [INFO] CodeGenerator:892 - code generatio: config db path: C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\
+2026-05-05 17:19:04,441 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\license.tmp_save
+2026-05-05 17:19:05,105 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\license.tmp
+2026-05-05 17:19:05,199 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\gpio.tmp_save
+2026-05-05 17:19:05,497 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\gpio.tmp
+2026-05-05 17:19:06,885 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\stm32g4xx_it.c_save
+2026-05-05 17:19:07,532 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\stm32g4xx_it.c
+2026-05-05 17:19:07,566 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\stm32g4xx_it.h_save
+2026-05-05 17:19:07,895 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\stm32g4xx_it.h
+2026-05-05 17:19:07,945 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\stm32g4xx_hal_msp.c_save
+2026-05-05 17:19:08,343 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\stm32g4xx_hal_msp.c
+2026-05-05 17:19:08,369 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\system.tmp_save
+2026-05-05 17:19:08,540 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\system.tmp
+2026-05-05 17:19:08,568 [INFO] CodeEngine:321 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\stm32g4xx_hal_conf.h_save
+2026-05-05 17:19:08,783 [INFO] CodeEngine:345 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\stm32g4xx_hal_conf.h
+2026-05-05 17:19:08,844 [WARN] IPConfigManager:3238 - Warning: the RefConfig RCC_CommonPeriphClockConfig is not available in your config.xml file
+2026-05-05 17:19:08,881 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\main.h_save
+2026-05-05 17:19:09,251 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\main.h
+2026-05-05 17:19:09,271 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\main.c_save
+2026-05-05 17:19:09,675 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\main.c
+2026-05-05 17:19:10,647 [INFO] ProjectBuilder:3606 - Time for Copy HAL[1] : 502mS.
+2026-05-05 17:19:10,657 [INFO] ProjectBuilder:5216 - Project Generator version: 4.7.0-B52
+2026-05-05 17:19:10,971 [INFO] ConfigFileManager:1595 - The Die is : DIE469
+2026-05-05 17:19:13,969 [INFO] ProjectBuilder:5496 - Time for Generating toolchain IDE Files: 3308mS.
+2026-05-05 17:19:13,977 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 1mS.
+2026-05-05 17:19:14,047 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.
+2026-05-05 17:26:24,643 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2026-05-05 17:28:53,518 [INFO] WebApp:194 - Connection lost
+2026-05-05 17:28:54,525 [INFO] WebApp:191 - Connection restablished
+2026-05-05 17:32:12,094 [INFO] WebApp:194 - Connection lost
+2026-05-05 17:32:12,652 [INFO] WebApp:191 - Connection restablished
+2026-05-05 18:07:57,048 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-05-05 18:08:05,466 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-05-05 18:08:11,345 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-05-05 18:08:20,888 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-05-05 18:08:32,036 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-05-05 18:08:39,012 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-05-05 18:08:51,061 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-05-05 18:08:54,342 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-05-05 18:08:58,192 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-05-05 18:10:31,941 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-05-05 18:12:26,789 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-05-05 18:12:32,273 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-05-05 18:12:50,056 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-05-05 18:12:53,805 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-05-05 18:13:04,517 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-05-05 18:13:07,847 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-05-05 18:13:22,176 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-05-05 18:13:25,803 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-05-05 18:13:28,525 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-05-05 18:13:31,553 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-05-05 18:26:18,827 [WARN] Mcu:7025 - HRTIM1 Clean up: some unused parameters were removed
+2026-05-05 18:26:18,852 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 998154744 Bytes (1073741824)
+2026-05-05 18:26:21,870 [WARN] Mcu:7025 - HRTIM1 Clean up: some unused parameters were removed
+2026-05-05 18:26:21,876 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 1000599976 Bytes (1073741824)
+2026-05-05 18:26:25,286 [WARN] Mcu:7025 - HRTIM1 Clean up: some unused parameters were removed
+2026-05-05 18:26:25,293 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 999922872 Bytes (1073741824)
+2026-05-05 18:26:26,330 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2026-05-05 18:26:26,330 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2026-05-05 18:26:26,330 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: HRTIM
+2026-05-05 18:26:26,330 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2026-05-05 18:26:26,332 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2026-05-05 18:26:26,336 [INFO] CodeGenerator:892 - code generatio: config db path: C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\
+2026-05-05 18:26:26,651 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\license.tmp_save
+2026-05-05 18:26:27,247 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\license.tmp
+2026-05-05 18:26:27,385 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\gpio.tmp_save
+2026-05-05 18:26:27,698 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\gpio.tmp
+2026-05-05 18:26:29,168 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\stm32g4xx_it.c_save
+2026-05-05 18:26:30,151 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\stm32g4xx_it.c
+2026-05-05 18:26:30,172 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\stm32g4xx_it.h_save
+2026-05-05 18:26:30,441 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\stm32g4xx_it.h
+2026-05-05 18:26:30,483 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\stm32g4xx_hal_msp.c_save
+2026-05-05 18:26:31,136 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\stm32g4xx_hal_msp.c
+2026-05-05 18:26:31,151 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\system.tmp_save
+2026-05-05 18:26:31,440 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\MXTmpFiles\system.tmp
+2026-05-05 18:26:31,522 [INFO] CodeEngine:321 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\stm32g4xx_hal_conf.h_save
+2026-05-05 18:26:31,809 [INFO] CodeEngine:345 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\stm32g4xx_hal_conf.h
+2026-05-05 18:26:31,871 [WARN] IPConfigManager:3238 - Warning: the RefConfig RCC_CommonPeriphClockConfig is not available in your config.xml file
+2026-05-05 18:26:31,904 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\main.h_save
+2026-05-05 18:26:32,252 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Inc\main.h
+2026-05-05 18:26:32,270 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\main.c_save
+2026-05-05 18:26:32,557 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\Core\Src\main.c
+2026-05-05 18:26:33,440 [INFO] ProjectBuilder:3606 - Time for Copy HAL[1] : 516mS.
+2026-05-05 18:26:33,449 [INFO] ProjectBuilder:5216 - Project Generator version: 4.7.0-B52
+2026-05-05 18:26:33,721 [INFO] ConfigFileManager:1595 - The Die is : DIE469
+2026-05-05 18:26:37,185 [INFO] ProjectBuilder:5496 - Time for Generating toolchain IDE Files: 3735mS.
+2026-05-05 18:26:37,186 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 1mS.
+2026-05-05 18:26:37,197 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.
