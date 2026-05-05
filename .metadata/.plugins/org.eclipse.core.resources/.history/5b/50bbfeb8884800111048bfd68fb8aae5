@@ -21,7 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "math.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -43,12 +43,6 @@
 HRTIM_HandleTypeDef hhrtim1;
 
 /* USER CODE BEGIN PV */
-volatile float u;
-volatile uint8_t tick;
-uint32_t arr;
-uint32_t duty;
-uint32_t duty_l;
-uint32_t duty_r;
 
 /* USER CODE END PV */
 
@@ -57,31 +51,6 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_HRTIM1_Init(void);
 /* USER CODE BEGIN PFP */
-
-float sign(float x) {
-    if (x > 0) return 1.0f;
-    if (x < 0) return -1.0f;
-    return 0.0f;
-}
-
-float saturation(float x, float y){
-if (fabsf(x) >= y){
-	x = y * sign(x);
-}
-return x;
-}
-
-void pwm_unipolar(float u){
-
-	float u_sat = saturation(u, 1.0f);
-	arr = 34000;
-	duty_l = (uint32_t)(fabsf(u_sat + 1) * 0.5f * (arr));
-	duty_r = (uint32_t)(fabsf(1 - u_sat) * 0.5f * (arr));
-	__HAL_HRTIM_SETCOMPARE(&hhrtim1, HRTIM_TIMERINDEX_TIMER_A, HRTIM_COMPAREUNIT_1, duty_r);
-	__HAL_HRTIM_SETCOMPARE(&hhrtim1, HRTIM_TIMERINDEX_TIMER_A, HRTIM_COMPAREUNIT_3, duty_l);
-}
-
-
 
 /* USER CODE END PFP */
 
@@ -123,13 +92,10 @@ int main(void)
   /* USER CODE BEGIN 2 */
   //Включаем физический выход (Output 1) для Таймера A
    HAL_HRTIM_WaveformOutputStart(&hhrtim1, HRTIM_OUTPUT_TA1);
-   HAL_HRTIM_WaveformOutputStart(&hhrtim1, HRTIM_OUTPUT_TA2);
 
     //Запускаем счетчик Таймера A
    HAL_HRTIM_WaveformCountStart(&hhrtim1, HRTIM_TIMERID_TIMER_A);
    __HAL_HRTIM_SETCOMPARE(&hhrtim1, HRTIM_TIMERINDEX_TIMER_A, HRTIM_COMPAREUNIT_1, 25500);
-   __HAL_HRTIM_SETCOMPARE(&hhrtim1, HRTIM_TIMERINDEX_TIMER_A, HRTIM_COMPAREUNIT_3, 25500);
-
 
   /* USER CODE END 2 */
 
@@ -137,7 +103,6 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  pwm_unipolar(u);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -297,7 +262,6 @@ static void MX_HRTIM1_Init(void)
   {
     Error_Handler();
   }
-  pOutputCfg.SetSource = HRTIM_OUTPUTSET_TIMCMP3;
   if (HAL_HRTIM_WaveformOutputConfig(&hhrtim1, HRTIM_TIMERINDEX_TIMER_A, HRTIM_OUTPUT_TA2, &pOutputCfg) != HAL_OK)
   {
     Error_Handler();

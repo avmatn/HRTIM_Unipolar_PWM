@@ -21,7 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "math.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -74,14 +74,16 @@ return x;
 void pwm_unipolar(float u){
 
 	float u_sat = saturation(u, 1.0f);
-	arr = 34000;
+	arr = 68000;
 	duty_l = (uint32_t)(fabsf(u_sat + 1) * 0.5f * (arr));
 	duty_r = (uint32_t)(fabsf(1 - u_sat) * 0.5f * (arr));
 	__HAL_HRTIM_SETCOMPARE(&hhrtim1, HRTIM_TIMERINDEX_TIMER_A, HRTIM_COMPAREUNIT_1, duty_r);
 	__HAL_HRTIM_SETCOMPARE(&hhrtim1, HRTIM_TIMERINDEX_TIMER_A, HRTIM_COMPAREUNIT_3, duty_l);
+//	__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, duty_r); // RPWM
+//  __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, duty_l);    // LPWM
+
+
 }
-
-
 
 /* USER CODE END PFP */
 

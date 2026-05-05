@@ -21,7 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "math.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -71,7 +71,7 @@ if (fabsf(x) >= y){
 return x;
 }
 
-void pwm_unipolar(float u){
+void pwm_unipolar_A(float u){
 
 	float u_sat = saturation(u, 1.0f);
 	arr = 34000;
