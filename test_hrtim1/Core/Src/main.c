@@ -40,6 +40,8 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+ADC_HandleTypeDef hadc1;
+
 HRTIM_HandleTypeDef hhrtim1;
 
 /* USER CODE BEGIN PV */
@@ -52,12 +54,22 @@ uint32_t duty_r;
 uint32_t duty_l0;
 uint32_t duty_r0;
 
+volatile uint32_t dbg_misr = 0;
+volatile uint32_t dbg_mdier;
+volatile uint32_t dbg_mcr = 0;
+volatile uint32_t dbg_cr2 = 0;
+volatile uint32_t dbg_iser = 0;
+volatile uint32_t dbg_irq_count = 0;
+
+volatile uint16_t adc_raw;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_HRTIM1_Init(void);
+static void MX_ADC1_Init(void);
 /* USER CODE BEGIN PFP */
 
 float sign(float x) {
@@ -130,7 +142,15 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_HRTIM1_Init();
+  MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
+
+  HAL_ADCEx_Calibration_Start(&hadc1, ADC_SINGLE_ENDED);
+  HAL_ADC_Start_IT(&hadc1);
+
+  //HAL_ADC_Start_DMA(&hadc1, (uint32_t *)&adc_raw, 1);
+
+
   //Включаем физические выходы (Output 1,2) для Таймера A
    HAL_HRTIM_WaveformOutputStart(&hhrtim1, HRTIM_OUTPUT_TA1);
    HAL_HRTIM_WaveformOutputStart(&hhrtim1, HRTIM_OUTPUT_TA2);
@@ -141,6 +161,13 @@ int main(void)
    HAL_HRTIM_WaveformCountStart(&hhrtim1, HRTIM_TIMERID_MASTER);
    HAL_HRTIM_WaveformCountStart(&hhrtim1, HRTIM_TIMERID_TIMER_A);
    HAL_HRTIM_WaveformCountStart(&hhrtim1, HRTIM_TIMERID_TIMER_B);
+
+   __HAL_HRTIM_MASTER_CLEAR_IT(&hhrtim1, HRTIM_MASTER_IT_MCMP3);
+   __HAL_HRTIM_MASTER_ENABLE_IT(&hhrtim1, HRTIM_MASTER_IT_MCMP3);
+
+   HAL_NVIC_ClearPendingIRQ(HRTIM1_Master_IRQn);
+   HAL_NVIC_SetPriority(HRTIM1_Master_IRQn, 0, 0);
+   HAL_NVIC_EnableIRQ(HRTIM1_Master_IRQn);
    //__HAL_HRTIM_SETCOMPARE(&hhrtim1, HRTIM_TIMERINDEX_TIMER_A, HRTIM_COMPAREUNIT_1, 25500);
    //__HAL_HRTIM_SETCOMPARE(&hhrtim1, HRTIM_TIMERINDEX_TIMER_A, HRTIM_COMPAREUNIT_3, 25500);
 
@@ -153,6 +180,12 @@ int main(void)
   {
 	   pwm_unipolar_A(u);
 	   pwm_unipolar_B(u);
+
+	   dbg_misr  = HRTIM1->sMasterRegs.MISR;
+	   dbg_mdier = HRTIM1->sMasterRegs.MDIER;
+	   dbg_mcr   = HRTIM1->sMasterRegs.MCR;
+
+	   //adc_raw = HAL_ADC_GetValue(&hadc1);
 
     /* USER CODE END WHILE */
 
@@ -208,6 +241,74 @@ void SystemClock_Config(void)
 }
 
 /**
+  * @brief ADC1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_ADC1_Init(void)
+{
+
+  /* USER CODE BEGIN ADC1_Init 0 */
+
+  /* USER CODE END ADC1_Init 0 */
+
+  ADC_MultiModeTypeDef multimode = {0};
+  ADC_ChannelConfTypeDef sConfig = {0};
+
+  /* USER CODE BEGIN ADC1_Init 1 */
+
+  /* USER CODE END ADC1_Init 1 */
+
+  /** Common config
+  */
+  hadc1.Instance = ADC1;
+  hadc1.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV4;
+  hadc1.Init.Resolution = ADC_RESOLUTION_12B;
+  hadc1.Init.DataAlign = ADC_DATAALIGN_RIGHT;
+  hadc1.Init.GainCompensation = 0;
+  hadc1.Init.ScanConvMode = ADC_SCAN_DISABLE;
+  hadc1.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
+  hadc1.Init.LowPowerAutoWait = DISABLE;
+  hadc1.Init.ContinuousConvMode = DISABLE;
+  hadc1.Init.NbrOfConversion = 1;
+  hadc1.Init.DiscontinuousConvMode = DISABLE;
+  hadc1.Init.ExternalTrigConv = ADC_EXTERNALTRIG_HRTIM_TRG1;
+  hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_RISING;
+  hadc1.Init.DMAContinuousRequests = DISABLE;
+  hadc1.Init.Overrun = ADC_OVR_DATA_PRESERVED;
+  hadc1.Init.OversamplingMode = DISABLE;
+  if (HAL_ADC_Init(&hadc1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure the ADC multi-mode
+  */
+  multimode.Mode = ADC_MODE_INDEPENDENT;
+  if (HAL_ADCEx_MultiModeConfigChannel(&hadc1, &multimode) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure Regular Channel
+  */
+  sConfig.Channel = ADC_CHANNEL_1;
+  sConfig.Rank = ADC_REGULAR_RANK_1;
+  sConfig.SamplingTime = ADC_SAMPLETIME_12CYCLES_5;
+  sConfig.SingleDiff = ADC_SINGLE_ENDED;
+  sConfig.OffsetNumber = ADC_OFFSET_NONE;
+  sConfig.Offset = 0;
+  if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN ADC1_Init 2 */
+
+  /* USER CODE END ADC1_Init 2 */
+
+}
+
+/**
   * @brief HRTIM1 Initialization Function
   * @param None
   * @retval None
@@ -219,6 +320,7 @@ static void MX_HRTIM1_Init(void)
 
   /* USER CODE END HRTIM1_Init 0 */
 
+  HRTIM_ADCTriggerCfgTypeDef pADCTriggerCfg = {0};
   HRTIM_TimeBaseCfgTypeDef pTimeBaseCfg = {0};
   HRTIM_TimerCfgTypeDef pTimerCfg = {0};
   HRTIM_CompareCfgTypeDef pCompareCfg = {0};
@@ -243,6 +345,16 @@ static void MX_HRTIM1_Init(void)
   {
     Error_Handler();
   }
+  pADCTriggerCfg.UpdateSource = HRTIM_ADCTRIGGERUPDATE_MASTER;
+  pADCTriggerCfg.Trigger = HRTIM_ADCTRIGGEREVENT13_MASTER_CMP3;
+  if (HAL_HRTIM_ADCTriggerConfig(&hhrtim1, HRTIM_ADCTRIGGER_1, &pADCTriggerCfg) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_HRTIM_ADCPostScalerConfig(&hhrtim1, HRTIM_ADCTRIGGER_1, 0) != HAL_OK)
+  {
+    Error_Handler();
+  }
   pTimeBaseCfg.Period = 34000;
   pTimeBaseCfg.RepetitionCounter = 0x00;
   pTimeBaseCfg.PrescalerRatio = HRTIM_PRESCALERRATIO_MUL4;
@@ -251,7 +363,7 @@ static void MX_HRTIM1_Init(void)
   {
     Error_Handler();
   }
-  pTimerCfg.InterruptRequests = HRTIM_MASTER_IT_NONE;
+  pTimerCfg.InterruptRequests = HRTIM_MASTER_IT_MCMP3;
   pTimerCfg.DMARequests = HRTIM_MASTER_DMA_NONE;
   pTimerCfg.DMASrcAddress = 0x0000;
   pTimerCfg.DMADstAddress = 0x0000;
@@ -275,6 +387,16 @@ static void MX_HRTIM1_Init(void)
   {
     Error_Handler();
   }
+  pCompareCfg.CompareValue = 17000;
+  if (HAL_HRTIM_WaveformCompareConfig(&hhrtim1, HRTIM_TIMERINDEX_MASTER, HRTIM_COMPAREUNIT_2, &pCompareCfg) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  pCompareCfg.CompareValue = 8500;
+  if (HAL_HRTIM_WaveformCompareConfig(&hhrtim1, HRTIM_TIMERINDEX_MASTER, HRTIM_COMPAREUNIT_3, &pCompareCfg) != HAL_OK)
+  {
+    Error_Handler();
+  }
   pTimeBaseCfg.Period = 17000;
   if (HAL_HRTIM_TimeBaseConfig(&hhrtim1, HRTIM_TIMERINDEX_TIMER_A, &pTimeBaseCfg) != HAL_OK)
   {
@@ -290,7 +412,7 @@ static void MX_HRTIM1_Init(void)
     Error_Handler();
   }
   if (HAL_HRTIM_RollOverModeConfig(&hhrtim1, HRTIM_TIMERINDEX_TIMER_A, HRTIM_TIM_FEROM_BOTH|HRTIM_TIM_BMROM_BOTH
-                              |HRTIM_TIM_ADROM_BOTH|HRTIM_TIM_OUTROM_BOTH
+                              |HRTIM_TIM_ADROM_CREST|HRTIM_TIM_OUTROM_BOTH
                               |HRTIM_TIM_ROM_BOTH) != HAL_OK)
   {
     Error_Handler();
@@ -406,12 +528,42 @@ static void MX_HRTIM1_Init(void)
   */
 static void MX_GPIO_Init(void)
 {
+  GPIO_InitTypeDef GPIO_InitStruct = {0};
   /* USER CODE BEGIN MX_GPIO_Init_1 */
 
   /* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOA_CLK_ENABLE();
+  __HAL_RCC_GPIOB_CLK_ENABLE();
+  __HAL_RCC_GPIOC_CLK_ENABLE();
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15|GPIO_PIN_6, GPIO_PIN_SET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_SET);
+
+  /*Configure GPIO pin : PB15 */
+  GPIO_InitStruct.Pin = GPIO_PIN_15;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PC7 */
+  GPIO_InitStruct.Pin = GPIO_PIN_7;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PB6 */
+  GPIO_InitStruct.Pin = GPIO_PIN_6;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /* USER CODE BEGIN MX_GPIO_Init_2 */
 
@@ -419,7 +571,30 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+/*void HAL_HRTIM_Compare3EventCallback(HRTIM_HandleTypeDef *hhrtim,
+                                     uint32_t TimerIdx)
+{
+    if (hhrtim->Instance == HRTIM1 &&
+        TimerIdx == HRTIM_TIMERINDEX_MASTER)
+    {
+        HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_SET);
 
+    }
+}*/
+
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef * hadc){
+	if(hadc -> Instance == ADC1){
+
+		//HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_15);
+
+		//GPIOB->BSRR = GPIO_PIN_15; //запись в регистр на поднятие пина
+
+	    adc_raw = HAL_ADC_GetValue(&hadc1);
+		//adc_raw = ADC1->DR;
+	    //HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_15);
+		//GPIOB->BRR = GPIO_PIN_15;//запись в регистр на поднятие пина
+	}
+}
 /* USER CODE END 4 */
 
 /**

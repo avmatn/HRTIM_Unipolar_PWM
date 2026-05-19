@@ -41,7 +41,12 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
-
+extern volatile uint32_t dbg_misr;
+extern volatile uint32_t dbg_mdier;
+extern volatile uint32_t dbg_mcr;
+extern volatile uint32_t dbg_cr2;
+extern volatile uint32_t dbg_iser;
+extern volatile uint32_t dbg_irq_count;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -55,6 +60,7 @@
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
+extern ADC_HandleTypeDef hadc1;
 extern HRTIM_HandleTypeDef hhrtim1;
 /* USER CODE BEGIN EV */
 
@@ -199,16 +205,39 @@ void SysTick_Handler(void)
 /******************************************************************************/
 
 /**
+  * @brief This function handles ADC1 and ADC2 global interrupt.
+  */
+void ADC1_2_IRQHandler(void)
+{
+  /* USER CODE BEGIN ADC1_2_IRQn 0 */
+
+  /* USER CODE END ADC1_2_IRQn 0 */
+  HAL_ADC_IRQHandler(&hadc1);
+  /* USER CODE BEGIN ADC1_2_IRQn 1 */
+
+  /* USER CODE END ADC1_2_IRQn 1 */
+}
+
+/**
   * @brief This function handles HRTIM master timer global interrupt.
   */
 void HRTIM1_Master_IRQHandler(void)
 {
   /* USER CODE BEGIN HRTIM1_Master_IRQn 0 */
+    GPIOB->ODR ^= GPIO_PIN_15;
+
+    dbg_misr  = HRTIM1->sMasterRegs.MISR;
+    dbg_mdier = HRTIM1->sMasterRegs.MDIER;
+
+    // если проверяешь прерывание по Master CMP3:
+    HRTIM1->sMasterRegs.MICR = HRTIM_MICR_MCMP3;
+ //HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_15);
 
   /* USER CODE END HRTIM1_Master_IRQn 0 */
   HAL_HRTIM_IRQHandler(&hhrtim1,HRTIM_TIMERINDEX_MASTER);
   /* USER CODE BEGIN HRTIM1_Master_IRQn 1 */
-
+    GPIOB->ODR ^= GPIO_PIN_15;
+  //HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_15);
   /* USER CODE END HRTIM1_Master_IRQn 1 */
 }
 
