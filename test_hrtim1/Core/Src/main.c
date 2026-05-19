@@ -54,13 +54,6 @@ uint32_t duty_r;
 uint32_t duty_l0;
 uint32_t duty_r0;
 
-volatile uint32_t dbg_misr = 0;
-volatile uint32_t dbg_mdier;
-volatile uint32_t dbg_mcr = 0;
-volatile uint32_t dbg_cr2 = 0;
-volatile uint32_t dbg_iser = 0;
-volatile uint32_t dbg_irq_count = 0;
-
 volatile uint16_t adc_raw;
 
 /* USER CODE END PV */
@@ -162,12 +155,6 @@ int main(void)
    HAL_HRTIM_WaveformCountStart(&hhrtim1, HRTIM_TIMERID_TIMER_A);
    HAL_HRTIM_WaveformCountStart(&hhrtim1, HRTIM_TIMERID_TIMER_B);
 
-   __HAL_HRTIM_MASTER_CLEAR_IT(&hhrtim1, HRTIM_MASTER_IT_MCMP3);
-   __HAL_HRTIM_MASTER_ENABLE_IT(&hhrtim1, HRTIM_MASTER_IT_MCMP3);
-
-   HAL_NVIC_ClearPendingIRQ(HRTIM1_Master_IRQn);
-   HAL_NVIC_SetPriority(HRTIM1_Master_IRQn, 0, 0);
-   HAL_NVIC_EnableIRQ(HRTIM1_Master_IRQn);
    //__HAL_HRTIM_SETCOMPARE(&hhrtim1, HRTIM_TIMERINDEX_TIMER_A, HRTIM_COMPAREUNIT_1, 25500);
    //__HAL_HRTIM_SETCOMPARE(&hhrtim1, HRTIM_TIMERINDEX_TIMER_A, HRTIM_COMPAREUNIT_3, 25500);
 
@@ -180,13 +167,6 @@ int main(void)
   {
 	   pwm_unipolar_A(u);
 	   pwm_unipolar_B(u);
-
-	   dbg_misr  = HRTIM1->sMasterRegs.MISR;
-	   dbg_mdier = HRTIM1->sMasterRegs.MDIER;
-	   dbg_mcr   = HRTIM1->sMasterRegs.MCR;
-
-	   //adc_raw = HAL_ADC_GetValue(&hadc1);
-
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -571,17 +551,6 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-/*void HAL_HRTIM_Compare3EventCallback(HRTIM_HandleTypeDef *hhrtim,
-                                     uint32_t TimerIdx)
-{
-    if (hhrtim->Instance == HRTIM1 &&
-        TimerIdx == HRTIM_TIMERINDEX_MASTER)
-    {
-        HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_SET);
-
-    }
-}*/
-
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef * hadc){
 	if(hadc -> Instance == ADC1){
 

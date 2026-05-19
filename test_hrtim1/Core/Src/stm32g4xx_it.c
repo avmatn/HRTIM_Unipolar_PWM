@@ -224,19 +224,10 @@ void ADC1_2_IRQHandler(void)
 void HRTIM1_Master_IRQHandler(void)
 {
   /* USER CODE BEGIN HRTIM1_Master_IRQn 0 */
-    GPIOB->ODR ^= GPIO_PIN_15;
-
-    dbg_misr  = HRTIM1->sMasterRegs.MISR;
-    dbg_mdier = HRTIM1->sMasterRegs.MDIER;
-
-    // если проверяешь прерывание по Master CMP3:
-    HRTIM1->sMasterRegs.MICR = HRTIM_MICR_MCMP3;
  //HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_15);
-
   /* USER CODE END HRTIM1_Master_IRQn 0 */
   HAL_HRTIM_IRQHandler(&hhrtim1,HRTIM_TIMERINDEX_MASTER);
   /* USER CODE BEGIN HRTIM1_Master_IRQn 1 */
-    GPIOB->ODR ^= GPIO_PIN_15;
   //HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_15);
   /* USER CODE END HRTIM1_Master_IRQn 1 */
 }
