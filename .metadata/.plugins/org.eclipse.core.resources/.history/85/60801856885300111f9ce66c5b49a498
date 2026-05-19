@@ -54,6 +54,13 @@ uint32_t duty_r;
 uint32_t duty_l0;
 uint32_t duty_r0;
 
+volatile uint32_t dbg_misr = 0;
+volatile uint32_t dbg_mdier;
+volatile uint32_t dbg_mcr = 0;
+volatile uint32_t dbg_cr2 = 0;
+volatile uint32_t dbg_iser = 0;
+volatile uint32_t dbg_irq_count = 0;
+
 volatile uint16_t adc_raw;
 
 /* USER CODE END PV */
@@ -173,6 +180,10 @@ int main(void)
   {
 	   pwm_unipolar_A(u);
 	   pwm_unipolar_B(u);
+
+	   dbg_misr  = HRTIM1->sMasterRegs.MISR;
+	   dbg_mdier = HRTIM1->sMasterRegs.MDIER;
+	   dbg_mcr   = HRTIM1->sMasterRegs.MCR;
 
 	   //adc_raw = HAL_ADC_GetValue(&hadc1);
 
