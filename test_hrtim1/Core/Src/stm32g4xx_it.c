@@ -41,12 +41,8 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
-extern volatile uint32_t dbg_misr;
-extern volatile uint32_t dbg_mdier;
-extern volatile uint32_t dbg_mcr;
-extern volatile uint32_t dbg_cr2;
-extern volatile uint32_t dbg_iser;
-extern volatile uint32_t dbg_irq_count;
+extern volatile uint8_t hrtim_control_flag;
+extern volatile uint32_t hrtim_irq_count;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -224,7 +220,7 @@ void ADC1_2_IRQHandler(void)
 void HRTIM1_Master_IRQHandler(void)
 {
   /* USER CODE BEGIN HRTIM1_Master_IRQn 0 */
- //HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_15);
+
   /* USER CODE END HRTIM1_Master_IRQn 0 */
   HAL_HRTIM_IRQHandler(&hhrtim1,HRTIM_TIMERINDEX_MASTER);
   /* USER CODE BEGIN HRTIM1_Master_IRQn 1 */

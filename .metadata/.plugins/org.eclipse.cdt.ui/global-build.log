@@ -1,13 +1,314 @@
-16:04:35 **** Incremental Build of configuration Debug for project test_hrtim1 ****
+12:23:44 **** Incremental Build of configuration Debug for project test_hrtim1 ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/stm32g4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32g4xx_it.d" -MT"Core/Src/stm32g4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32g4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 arm-none-eabi-gcc -o "test_hrtim1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test_hrtim1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: test_hrtim1.elf
  
 arm-none-eabi-size  test_hrtim1.elf 
 arm-none-eabi-objdump -h -S test_hrtim1.elf  > "test_hrtim1.list"
    text	   data	    bss	    dec	    hex	filename
-  25524	     12	   1972	  27508	   6b74	test_hrtim1.elf
+  25804	     28	   1980	  27812	   6ca4	test_hrtim1.elf
+Finished building: default.size.stdout
+ 
+Finished building: test_hrtim1.list
+ 
+12:24:48 **** Incremental Build of configuration Debug for project test_hrtim1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "test_hrtim1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test_hrtim1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: test_hrtim1.elf
+ 
+arm-none-eabi-size  test_hrtim1.elf 
+arm-none-eabi-objdump -h -S test_hrtim1.elf  > "test_hrtim1.list"
+   text	   data	    bss	    dec	    hex	filename
+  26160	     24	   1984	  28168	   6e08	test_hrtim1.elf
+Finished building: default.size.stdout
+ 
+Finished building: test_hrtim1.list
+ 
+12:25:04 **** Incremental Build of configuration Debug for project test_hrtim1 ****
+make -j8 all 
+arm-none-eabi-size  test_hrtim1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26160	     24	   1984	  28168	   6e08	test_hrtim1.elf
+Finished building: default.size.stdout
+ 
+12:29:44 **** Incremental Build of configuration Debug for project test_hrtim1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "test_hrtim1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test_hrtim1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: test_hrtim1.elf
+ 
+arm-none-eabi-size  test_hrtim1.elf 
+arm-none-eabi-objdump -h -S test_hrtim1.elf  > "test_hrtim1.list"
+   text	   data	    bss	    dec	    hex	filename
+  26164	     24	   1984	  28172	   6e0c	test_hrtim1.elf
+Finished building: default.size.stdout
+ 
+Finished building: test_hrtim1.list
+ 
+12:30:22 **** Incremental Build of configuration Debug for project test_hrtim1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "test_hrtim1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test_hrtim1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: test_hrtim1.elf
+ 
+arm-none-eabi-size  test_hrtim1.elf 
+arm-none-eabi-objdump -h -S test_hrtim1.elf  > "test_hrtim1.list"
+   text	   data	    bss	    dec	    hex	filename
+  26160	     24	   1984	  28168	   6e08	test_hrtim1.elf
+Finished building: default.size.stdout
+ 
+Finished building: test_hrtim1.list
+ 
+12:31:15 **** Incremental Build of configuration Debug for project test_hrtim1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "test_hrtim1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test_hrtim1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: test_hrtim1.elf
+ 
+arm-none-eabi-size  test_hrtim1.elf 
+arm-none-eabi-objdump -h -S test_hrtim1.elf  > "test_hrtim1.list"
+   text	   data	    bss	    dec	    hex	filename
+  26160	     24	   1984	  28168	   6e08	test_hrtim1.elf
+Finished building: default.size.stdout
+ 
+Finished building: test_hrtim1.list
+ 
+12:31:45 **** Incremental Build of configuration Debug for project test_hrtim1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "test_hrtim1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test_hrtim1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: test_hrtim1.elf
+ 
+arm-none-eabi-size  test_hrtim1.elf 
+arm-none-eabi-objdump -h -S test_hrtim1.elf  > "test_hrtim1.list"
+   text	   data	    bss	    dec	    hex	filename
+  26164	     24	   1984	  28172	   6e0c	test_hrtim1.elf
+Finished building: default.size.stdout
+ 
+Finished building: test_hrtim1.list
+ 
+12:33:18 **** Incremental Build of configuration Debug for project test_hrtim1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "test_hrtim1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test_hrtim1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: test_hrtim1.elf
+ 
+arm-none-eabi-size  test_hrtim1.elf 
+arm-none-eabi-objdump -h -S test_hrtim1.elf  > "test_hrtim1.list"
+   text	   data	    bss	    dec	    hex	filename
+  26180	     24	   1984	  28188	   6e1c	test_hrtim1.elf
+Finished building: default.size.stdout
+ 
+Finished building: test_hrtim1.list
+ 
+12:33:46 **** Incremental Build of configuration Debug for project test_hrtim1 ****
+make -j8 all 
+arm-none-eabi-size  test_hrtim1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26180	     24	   1984	  28188	   6e1c	test_hrtim1.elf
+Finished building: default.size.stdout
+ 
+12:53:49 **** Incremental Build of configuration Debug for project test_hrtim1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "test_hrtim1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test_hrtim1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: test_hrtim1.elf
+ 
+arm-none-eabi-size  test_hrtim1.elf 
+arm-none-eabi-objdump -h -S test_hrtim1.elf  > "test_hrtim1.list"
+   text	   data	    bss	    dec	    hex	filename
+  26200	     24	   1984	  28208	   6e30	test_hrtim1.elf
+Finished building: default.size.stdout
+ 
+Finished building: test_hrtim1.list
+ 
+12:54:28 **** Incremental Build of configuration Debug for project test_hrtim1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "test_hrtim1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test_hrtim1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: test_hrtim1.elf
+ 
+arm-none-eabi-size  test_hrtim1.elf 
+arm-none-eabi-objdump -h -S test_hrtim1.elf  > "test_hrtim1.list"
+   text	   data	    bss	    dec	    hex	filename
+  26200	     24	   1984	  28208	   6e30	test_hrtim1.elf
+Finished building: default.size.stdout
+ 
+Finished building: test_hrtim1.list
+ 
+12:55:06 **** Incremental Build of configuration Debug for project test_hrtim1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "test_hrtim1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test_hrtim1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: test_hrtim1.elf
+ 
+arm-none-eabi-size  test_hrtim1.elf 
+arm-none-eabi-objdump -h -S test_hrtim1.elf  > "test_hrtim1.list"
+   text	   data	    bss	    dec	    hex	filename
+  26200	     24	   1984	  28208	   6e30	test_hrtim1.elf
+Finished building: default.size.stdout
+ 
+Finished building: test_hrtim1.list
+ 
+12:58:49 **** Incremental Build of configuration Debug for project test_hrtim1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "test_hrtim1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test_hrtim1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: test_hrtim1.elf
+ 
+arm-none-eabi-size  test_hrtim1.elf 
+arm-none-eabi-objdump -h -S test_hrtim1.elf  > "test_hrtim1.list"
+   text	   data	    bss	    dec	    hex	filename
+  26200	     24	   1984	  28208	   6e30	test_hrtim1.elf
+Finished building: default.size.stdout
+ 
+Finished building: test_hrtim1.list
+ 
+12:59:50 **** Incremental Build of configuration Debug for project test_hrtim1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "test_hrtim1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test_hrtim1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: test_hrtim1.elf
+ 
+arm-none-eabi-size  test_hrtim1.elf 
+arm-none-eabi-objdump -h -S test_hrtim1.elf  > "test_hrtim1.list"
+   text	   data	    bss	    dec	    hex	filename
+  26180	     24	   1984	  28188	   6e1c	test_hrtim1.elf
+Finished building: default.size.stdout
+ 
+Finished building: test_hrtim1.list
+ 
+13:01:08 **** Incremental Build of configuration Debug for project test_hrtim1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "test_hrtim1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test_hrtim1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: test_hrtim1.elf
+ 
+arm-none-eabi-size  test_hrtim1.elf 
+arm-none-eabi-objdump -h -S test_hrtim1.elf  > "test_hrtim1.list"
+   text	   data	    bss	    dec	    hex	filename
+  26180	     24	   1984	  28188	   6e1c	test_hrtim1.elf
+Finished building: default.size.stdout
+ 
+Finished building: test_hrtim1.list
+ 
+13:01:36 **** Incremental Build of configuration Debug for project test_hrtim1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "test_hrtim1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test_hrtim1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: test_hrtim1.elf
+ 
+arm-none-eabi-size  test_hrtim1.elf 
+arm-none-eabi-objdump -h -S test_hrtim1.elf  > "test_hrtim1.list"
+   text	   data	    bss	    dec	    hex	filename
+  26180	     24	   1984	  28188	   6e1c	test_hrtim1.elf
+Finished building: default.size.stdout
+ 
+Finished building: test_hrtim1.list
+ 
+13:08:25 **** Incremental Build of configuration Debug for project test_hrtim1 ****
+make -j8 all 
+arm-none-eabi-size  test_hrtim1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26180	     24	   1984	  28188	   6e1c	test_hrtim1.elf
+Finished building: default.size.stdout
+ 
+13:20:10 **** Incremental Build of configuration Debug for project test_hrtim1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "test_hrtim1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test_hrtim1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: test_hrtim1.elf
+ 
+arm-none-eabi-size  test_hrtim1.elf 
+arm-none-eabi-objdump -h -S test_hrtim1.elf  > "test_hrtim1.list"
+   text	   data	    bss	    dec	    hex	filename
+  26192	     24	   1984	  28200	   6e28	test_hrtim1.elf
+Finished building: default.size.stdout
+ 
+Finished building: test_hrtim1.list
+ 
+13:21:05 **** Incremental Build of configuration Debug for project test_hrtim1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "test_hrtim1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test_hrtim1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: test_hrtim1.elf
+ 
+arm-none-eabi-size  test_hrtim1.elf 
+arm-none-eabi-objdump -h -S test_hrtim1.elf  > "test_hrtim1.list"
+   text	   data	    bss	    dec	    hex	filename
+  26164	     24	   1984	  28172	   6e0c	test_hrtim1.elf
+Finished building: default.size.stdout
+ 
+Finished building: test_hrtim1.list
+ 
+13:22:22 **** Incremental Build of configuration Debug for project test_hrtim1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "test_hrtim1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test_hrtim1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: test_hrtim1.elf
+ 
+arm-none-eabi-size  test_hrtim1.elf 
+arm-none-eabi-objdump -h -S test_hrtim1.elf  > "test_hrtim1.list"
+   text	   data	    bss	    dec	    hex	filename
+  26180	     24	   1984	  28188	   6e1c	test_hrtim1.elf
+Finished building: default.size.stdout
+ 
+Finished building: test_hrtim1.list
+ 
+13:25:18 **** Incremental Build of configuration Debug for project test_hrtim1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "test_hrtim1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test_hrtim1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: test_hrtim1.elf
+ 
+arm-none-eabi-size  test_hrtim1.elf 
+arm-none-eabi-objdump -h -S test_hrtim1.elf  > "test_hrtim1.list"
+   text	   data	    bss	    dec	    hex	filename
+  26164	     24	   1984	  28172	   6e0c	test_hrtim1.elf
+Finished building: default.size.stdout
+ 
+Finished building: test_hrtim1.list
+ 
+13:27:37 **** Incremental Build of configuration Debug for project test_hrtim1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "test_hrtim1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test_hrtim1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: test_hrtim1.elf
+ 
+arm-none-eabi-size  test_hrtim1.elf 
+arm-none-eabi-objdump -h -S test_hrtim1.elf  > "test_hrtim1.list"
+   text	   data	    bss	    dec	    hex	filename
+  26180	     24	   1984	  28188	   6e1c	test_hrtim1.elf
+Finished building: default.size.stdout
+ 
+Finished building: test_hrtim1.list
+ 
+13:28:59 **** Incremental Build of configuration Debug for project test_hrtim1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "test_hrtim1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test_hrtim1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: test_hrtim1.elf
+ 
+arm-none-eabi-size  test_hrtim1.elf 
+arm-none-eabi-objdump -h -S test_hrtim1.elf  > "test_hrtim1.list"
+   text	   data	    bss	    dec	    hex	filename
+  26192	     24	   1984	  28200	   6e28	test_hrtim1.elf
+Finished building: default.size.stdout
+ 
+Finished building: test_hrtim1.list
+ 
+13:30:23 **** Incremental Build of configuration Debug for project test_hrtim1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "test_hrtim1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Александра\Documents\hrtim_test_pwm_1_signal\test_hrtim1\STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test_hrtim1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: test_hrtim1.elf
+ 
+arm-none-eabi-size  test_hrtim1.elf 
+arm-none-eabi-objdump -h -S test_hrtim1.elf  > "test_hrtim1.list"
+   text	   data	    bss	    dec	    hex	filename
+  26188	     24	   1984	  28196	   6e24	test_hrtim1.elf
 Finished building: default.size.stdout
  
 Finished building: test_hrtim1.list

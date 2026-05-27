@@ -26,7 +26,17 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
+typedef enum
+{
+    TRAP_POS_RISE = 0,
+    TRAP_POS_HOLD,
+    TRAP_POS_FALL,
 
+    TRAP_NEG_RISE,
+    TRAP_NEG_HOLD,
+    TRAP_NEG_FALL
+
+} TrapState;
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -54,7 +64,35 @@ uint32_t duty_r;
 uint32_t duty_l0;
 uint32_t duty_r0;
 
+volatile uint8_t mcmp3 = 0;  // флаг прерывания ацп
+
 volatile uint16_t adc_raw;
+
+// переменные для пересчета из дискрет в амперы
+#define ADC_MAX_CODE   4095.0f //
+#define CURRENT_MAX_A  4.7f
+float adc_zero = 2070.0f;
+volatile float current_A;
+
+volatile uint32_t control_loop_count = 0; // проверка захода в цикл
+
+#define CONTROL_FREQ_HZ      20000U
+#define SQUARE_HOLD_TIME_S   0.25f
+#define U_NEG               -0.2f
+#define U_POS                0.2f
+
+//pi regulator
+volatile float i_ref;
+float Kp = 1.312f;
+float Ki = 0.0167f;
+float er;
+float Int_e;
+
+//trapezoidal
+#define I_REF_AMP_A        4.0f
+#define TRAP_RAMP_TIME_S   0.006f   // 10 мс
+#define TRAP_HOLD_TIME_S   0.05f   // 20 мс
+
 
 /* USER CODE END PV */
 
@@ -98,6 +136,136 @@ void pwm_unipolar_B(float u){
 	__HAL_HRTIM_SETCOMPARE(&hhrtim1, HRTIM_TIMERINDEX_TIMER_B, HRTIM_COMPAREUNIT_3, duty_l0);
 }
 
+
+float adc_to_current(uint16_t adc_value)
+{
+    float k = CURRENT_MAX_A / (ADC_MAX_CODE / 2.0f);
+    return ((float)adc_value - adc_zero) * k;
+}
+
+float generator_i_ref_square(void)
+{
+    static uint32_t counter = 0;
+    static float i_local = -0.3f;
+
+    const float I_REF_NEG = -1.0f;
+    const float I_REF_POS =  1.0f;
+
+    const float T_HOLD = 0.2f;       // 25 постоянных времени
+    const uint32_t hold_ticks = (uint32_t)(CONTROL_FREQ_HZ * T_HOLD);
+
+    counter++;
+
+    if (counter >= hold_ticks)
+    {
+        counter = 0;
+
+        if (i_local < 0.0f)
+        {
+            i_local = I_REF_POS;
+        }
+        else
+        {
+            i_local = I_REF_NEG;
+        }
+    }
+    return i_local;
+}
+
+
+float generator_i_ref_trapezoid(void)
+{
+    static TrapState state = TRAP_POS_RISE;
+    static uint32_t counter = 0;
+
+    const uint32_t ramp_ticks = (uint32_t)(TRAP_RAMP_TIME_S * CONTROL_FREQ_HZ);
+    const uint32_t hold_ticks = (uint32_t)(TRAP_HOLD_TIME_S * CONTROL_FREQ_HZ);
+
+    float i_ref_local = 0.0f;
+
+    switch (state)
+    {
+        case TRAP_POS_RISE:
+            // 0 -> +1 А
+            i_ref_local = I_REF_AMP_A * ((float)counter / (float)ramp_ticks);
+
+            counter++;
+            if (counter >= ramp_ticks)
+            {
+                counter = 0;
+                state = TRAP_POS_HOLD;
+            }
+            break;
+
+        case TRAP_POS_HOLD:
+            // плато +1 А
+            i_ref_local = I_REF_AMP_A;
+
+            counter++;
+            if (counter >= hold_ticks)
+            {
+                counter = 0;
+                state = TRAP_POS_FALL;
+            }
+            break;
+
+        case TRAP_POS_FALL:
+            // +1 А -> 0
+            i_ref_local = I_REF_AMP_A * (1.0f - ((float)counter / (float)ramp_ticks));
+
+            counter++;
+            if (counter >= ramp_ticks)
+            {
+                counter = 0;
+                state = TRAP_NEG_RISE;
+            }
+            break;
+
+        case TRAP_NEG_RISE:
+            // 0 -> -1 А
+            i_ref_local = -I_REF_AMP_A * ((float)counter / (float)ramp_ticks);
+
+            counter++;
+            if (counter >= ramp_ticks)
+            {
+                counter = 0;
+                state = TRAP_NEG_HOLD;
+            }
+            break;
+
+        case TRAP_NEG_HOLD:
+            // плато -1 А
+            i_ref_local = -I_REF_AMP_A;
+
+            counter++;
+            if (counter >= hold_ticks)
+            {
+                counter = 0;
+                state = TRAP_NEG_FALL;
+            }
+            break;
+
+        case TRAP_NEG_FALL:
+            // -1 А -> 0
+            i_ref_local = -I_REF_AMP_A * (1.0f - ((float)counter / (float)ramp_ticks));
+
+            counter++;
+            if (counter >= ramp_ticks)
+            {
+                counter = 0;
+                state = TRAP_POS_RISE;
+            }
+            break;
+
+        default:
+            counter = 0;
+            state = TRAP_POS_RISE;
+            i_ref_local = 0.0f;
+            break;
+    }
+
+    return i_ref_local;
+}
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -137,12 +305,10 @@ int main(void)
   MX_HRTIM1_Init();
   MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
-
+//------------------------------------------------------------
   HAL_ADCEx_Calibration_Start(&hadc1, ADC_SINGLE_ENDED);
   HAL_ADC_Start_IT(&hadc1);
-
   //HAL_ADC_Start_DMA(&hadc1, (uint32_t *)&adc_raw, 1);
-
 
   //Включаем физические выходы (Output 1,2) для Таймера A
    HAL_HRTIM_WaveformOutputStart(&hhrtim1, HRTIM_OUTPUT_TA1);
@@ -155,8 +321,9 @@ int main(void)
    HAL_HRTIM_WaveformCountStart(&hhrtim1, HRTIM_TIMERID_TIMER_A);
    HAL_HRTIM_WaveformCountStart(&hhrtim1, HRTIM_TIMERID_TIMER_B);
 
-   //__HAL_HRTIM_SETCOMPARE(&hhrtim1, HRTIM_TIMERINDEX_TIMER_A, HRTIM_COMPAREUNIT_1, 25500);
-   //__HAL_HRTIM_SETCOMPARE(&hhrtim1, HRTIM_TIMERINDEX_TIMER_A, HRTIM_COMPAREUNIT_3, 25500);
+   //__HAL_HRTIM_SETCOMPARE(&hhrtim1, HRTIM_TIMERINDEX_TIMER_A, HRTIM_COMPAREUNIT_1, 8500);
+
+   //__HAL_HRTIM_SETCOMPARE(&hhrtim1, HRTIM_TIMERINDEX_TIMER_A, HRTIM_COMPAREUNIT_3, 8500);
 
 
   /* USER CODE END 2 */
@@ -165,8 +332,23 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	   pwm_unipolar_A(u);
-	   pwm_unipolar_B(u);
+	  if (mcmp3) {
+		  mcmp3 = 0;
+
+		  i_ref = generator_i_ref_trapezoid();
+		  er = i_ref - current_A;
+		  Int_e += Ki * er;
+		  Int_e = saturation(Int_e, 0.95f);
+		  u = Kp * er + Int_e;
+		  u = saturation(u, 0.95f);
+
+		 // u = generator_u_square();
+		  pwm_unipolar_A(u);
+		  pwm_unipolar_B(u);
+
+	    control_loop_count ++;
+	  }
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -372,7 +554,6 @@ static void MX_HRTIM1_Init(void)
   {
     Error_Handler();
   }
-  pCompareCfg.CompareValue = 8500;
   if (HAL_HRTIM_WaveformCompareConfig(&hhrtim1, HRTIM_TIMERINDEX_MASTER, HRTIM_COMPAREUNIT_3, &pCompareCfg) != HAL_OK)
   {
     Error_Handler();
@@ -416,6 +597,7 @@ static void MX_HRTIM1_Init(void)
   {
     Error_Handler();
   }
+  pCompareCfg.CompareValue = 8500;
   if (HAL_HRTIM_WaveformCompareConfig(&hhrtim1, HRTIM_TIMERINDEX_TIMER_A, HRTIM_COMPAREUNIT_1, &pCompareCfg) != HAL_OK)
   {
     Error_Handler();
@@ -441,7 +623,7 @@ static void MX_HRTIM1_Init(void)
   {
     Error_Handler();
   }
-  pOutputCfg.Polarity = HRTIM_OUTPUTPOLARITY_HIGH;
+  pOutputCfg.Polarity = HRTIM_OUTPUTPOLARITY_LOW;
   pOutputCfg.SetSource = HRTIM_OUTPUTSET_TIMCMP1;
   pOutputCfg.ResetSource = HRTIM_OUTPUTRESET_TIMCMP2;
   pOutputCfg.IdleMode = HRTIM_OUTPUTIDLEMODE_NONE;
@@ -519,31 +701,31 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOC_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15|GPIO_PIN_6, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(GPIOB, Debug_NVIC_Pin|Enable_1_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(Enable_2_GPIO_Port, Enable_2_Pin, GPIO_PIN_SET);
 
-  /*Configure GPIO pin : PB15 */
-  GPIO_InitStruct.Pin = GPIO_PIN_15;
+  /*Configure GPIO pin : Debug_NVIC_Pin */
+  GPIO_InitStruct.Pin = Debug_NVIC_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+  HAL_GPIO_Init(Debug_NVIC_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : PC7 */
-  GPIO_InitStruct.Pin = GPIO_PIN_7;
+  /*Configure GPIO pin : Enable_2_Pin */
+  GPIO_InitStruct.Pin = Enable_2_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
-  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+  HAL_GPIO_Init(Enable_2_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : PB6 */
-  GPIO_InitStruct.Pin = GPIO_PIN_6;
+  /*Configure GPIO pin : Enable_1_Pin */
+  GPIO_InitStruct.Pin = Enable_1_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+  HAL_GPIO_Init(Enable_1_GPIO_Port, &GPIO_InitStruct);
 
   /* USER CODE BEGIN MX_GPIO_Init_2 */
 
@@ -551,19 +733,17 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef * hadc){
 	if(hadc -> Instance == ADC1){
 
-		//HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_15);
-
-		//GPIOB->BSRR = GPIO_PIN_15; //запись в регистр на поднятие пина
-
 	    adc_raw = HAL_ADC_GetValue(&hadc1);
-		//adc_raw = ADC1->DR;
-	    //HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_15);
-		//GPIOB->BRR = GPIO_PIN_15;//запись в регистр на поднятие пина
+	    current_A = adc_to_current(adc_raw);
+	    mcmp3 = 1;
 	}
 }
+
+
 /* USER CODE END 4 */
 
 /**
